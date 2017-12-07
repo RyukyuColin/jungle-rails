@@ -8,6 +8,33 @@
     <h4>Thank you for your order!</h4>
   </div>
 
+  <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th colspan="2">Product</th>
+          <th>Quantity</th>
+          <th>Total Item Price</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @order_total = 0 %>
+        <% @order.line_items.product.each do |product_id, quantity| %>
+          <%= render 'items', product_id: product_id, quantity: product_id.quantity %>
+        <% end %>
+        </tbody>
+  <tfoot>
+<tr>
+    <td colspan="3">
+      TOTAL:
+    </td>
+    <td>
+      <%= @order_total %>
+    </td>
+  </tr>
+</tfoot>
+
+    </table>
+
   <%= link_to "Continue Shopping", root_path, class: 'btn btn-lg btn-primary' %>
 
 </section>
