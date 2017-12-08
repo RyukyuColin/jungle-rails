@@ -24,6 +24,11 @@
           <dd><%= @product.price %></dd>
         </dl>
       </div>
+
+      <% @review.each do |product_id, user_id| %>
+        <%= render 'review', product_id: product_id, user_id: user_id %>
+      <% end %>
+
     </div>
 
   </article>
