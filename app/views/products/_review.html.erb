@@ -1,16 +1,14 @@
 <% if review = Review.find_by(id: product_id) %>
-<% user = User.find_by(id: user_id) %>
+<% user = User.find(review.user_id) %>
 
-<div class="col-sm-4">
-  <h2>Reviews</h2>
-  <dl class="dl-horizontal">
-    <dt>Descrition</dt>
-    <dd><%= review.description %></dd>
-    <dt>Rating</dt>
-    <dd><%= review.rating %></dd>
-    <dt>User</dt>
-    <dd><%= review.user_id %></dd>
-  </dl>
+<div class="row">
+  <div class="review">
+    <ul>
+      <li>Descrition: <%= review.description %> </li>
+      <li>Rating: <%= review.rating %> </li>
+      <li>User: <%= user.first_name %> </li>
+    </ul>
+  </div>
 </div>
 
 
