@@ -1,5 +1,5 @@
 class ReviewsController < ApplicationController
-   before_action :require_login
+   before_action :require_login, only: [:destroy]
 
   def create
     @review = Review.new(review_params)
@@ -16,6 +16,12 @@ class ReviewsController < ApplicationController
 
   def review_params
     params.require(:review).permit(:description, :rating)
+  end
+
+  def destroy
+    @review = Review.find(params[:id])
+    @review.destroy
+    redirect_to @review.product, notice: 'Review successfully deleted'
   end
 
   private

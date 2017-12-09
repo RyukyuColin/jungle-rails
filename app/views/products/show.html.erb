@@ -51,6 +51,8 @@
 
     <% if !current_user %>
 
+    <h2>Reviews</h2>
+
     <% @review.each do |product_id| %>
       <%= render 'review', product_id: product_id %>
     <% end %>
