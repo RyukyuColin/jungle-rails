@@ -6,7 +6,7 @@
 
   <article class="product-detail">
 
-    <div class="row">
+    <div class="row" class="product-description">
 
       <div class="col-sm-4">
         <%= image_tag @product.image.url, class: 'main-img' %>
@@ -26,9 +26,11 @@
       </div>
     </div>
 
+    <div class="row">
+    <div class="col-sm-5">
     <% if current_user %>
 
-    <h2>Review this product!</h2>
+    <h3>Review this product</h3>
 
      <%= form_for([@product, @new_review]) do |f| %>
       <div class="field">
@@ -40,9 +42,13 @@
       <div class="actions">
         <%= f.submit %>
       </div>
+    </div>
+  </div>
     <% end %>
+    <div class="row">
+    <div class="col-sm-5">
 
-    <h2>Reviews</h2>
+    <h3>Reviews</h3>
 
     <% @review.each do |product_id| %>
       <%= render 'review', product_id: product_id %>
@@ -51,12 +57,14 @@
 
     <% if !current_user %>
 
-    <h2>Reviews</h2>
+    <h3>Reviews</h3>
 
     <% @review.each do |product_id| %>
       <%= render 'review', product_id: product_id %>
     <% end %>
     <% end %>
+  </div>
+  </div>
 
   </article>
 

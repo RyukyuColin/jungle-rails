@@ -82,6 +82,52 @@ main section.products-show {
     img.main-img {
       max-width: 100%;
     }
+
+    h3 {
+      border-bottom: 1px solid #eee;
+    }
+
+    textarea {
+      width: 350px;
+      height: 100px;
+      resize: none;
+    }
+
+    .actions {
+      float: right;
+    }
+  }
+}
+
+.products-show {
+
+  label {
+    display: block;
+  }
+
+  .review {
+    border: 1.5px solid #eee;
+    border-radius: 10px;
+    margin: 10px 0px;
+    padding: 10px;
+
+    ul {
+      list-style:none;
+      padding: 0px;
+
+      a {
+        margin-left: 30px;
+      }
+
+      .review-user {
+        font-style: italic;
+      }
+
+      .fa {
+        font-size: 2em;
+      }
+    }
+
   }
 }
 
