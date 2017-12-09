@@ -1,0 +1,15 @@
+<% if review = Review.find_by(id: product_id) %>
+<% user = User.find(review.user_id) %>
+
+<div class="row">
+  <div class="review">
+    <ul>
+      <li>Descrition: <%= review.description %> </li>
+      <li>Rating: <%= review.rating %> </li>
+      <li>User: <%= user.first_name %> </li>
+    </ul>
+  </div>
+</div>
+
+
+<% end %>
