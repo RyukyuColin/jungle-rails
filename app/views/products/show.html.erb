@@ -46,26 +46,25 @@
   </div>
     <% end %>
     <div class="row">
-    <div class="col-sm-5">
+      <div class="col-sm-5">
 
-    <h3>Reviews</h3>
+        <h3>Reviews</h3>
 
-    <% @review.each do |product_id| %>
-      <%= render 'review', product_id: product_id %>
-    <% end %>
-    <% end %>
+        <% @review.each do |product_id| %>
+          <%= render 'review', product_id: product_id %>
+          <% end %>
+        <% end %>
 
-    <% if !current_user %>
 
-    <h3>Reviews</h3>
+        <% if !current_user %>
 
-    <% @review.each do |product_id| %>
-      <%= render 'review', product_id: product_id %>
-    <% end %>
-    <% end %>
+          <h3>Reviews</h3>
+
+          <% @review.each do |product_id| %>
+            <%= render 'review', product_id: product_id %>
+          <% end %>
+        <% end %>
+    </div>
   </div>
-  </div>
-
   </article>
-
 </section>
