@@ -1,6 +1,6 @@
 # Jungle
 
-A mini e-commerce application built with Rails 4.2 for purposes of teaching Rails by example.
+A mini e-commerce application built with Rails 4.2 for purposes of learning Rails by example. Styled using Sass and Bootstrap.
 
 
 ## Setup
@@ -26,3 +26,19 @@ More information in their docs: <https://stripe.com/docs/testing#cards>
 * Rails 4.2 [Rails Guide](http://guides.rubyonrails.org/v4.2/)
 * PostgreSQL 9.x
 * Stripe
+* Bcrypt
+* Puma
+
+## ScreenShots
+
+Home Page
+!["Screenshot Home Page"](https://github.com/RyukyuColin/jungle-rails/blob/master/docs/Screen%20Shot%202017-12-10%20at%2017.53.07.png)
+
+Product Page
+!["Screenshot Product Page"](https://github.com/RyukyuColin/jungle-rails/blob/master/docs/Screen%20Shot%202017-12-10%20at%2017.53.47.png)
+
+Shopping Cart Page
+!["Screenshot Shopping Cart"](https://github.com/RyukyuColin/jungle-rails/blob/master/docs/Screen%20Shot%202017-12-10%20at%2017.54.37.png)
+
+Successful Order
+!["Screenshot Successful Order"](https://github.com/RyukyuColin/jungle-rails/blob/master/docs/Screen%20Shot%202017-12-10%20at%2017.55.37.png)
