@@ -18,12 +18,17 @@ RSpec.feature "AddToCarts", type: :feature, js: true do
   end
 
   scenario "" do
+
     # ACT
     visit root_path
+    first('.product .btn-primary').click
+    sleep 2
 
     # DEBUG
     save_screenshot
 
     # VERIFY
-    expect()
+    expect(page).to have_css('.navbar-right', text: 'My Cart (1)')
+
   end
+end
