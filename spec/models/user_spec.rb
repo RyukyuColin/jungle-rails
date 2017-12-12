@@ -130,7 +130,7 @@ RSpec.describe User, type: :model do
         password: 'abc12345',
         password_confirmation: 'abc12345'
       })
-      expect(User.authenticate_with_credentials(@user.email, @user.password)).to eql(@user)
+      expect(User.authenticate_with_credentials(@user.email, @user.password)).to be_an_instance_of User
     end
     it 'should return nil if email is invalid' do
       @user = User.create!({
