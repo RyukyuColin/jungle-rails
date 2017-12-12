@@ -17,4 +17,17 @@ RSpec.feature "ProductDetails", type: :feature, js: true do
     end
   end
 
+  scenario "They click on a product link" do
+    # ACT
+    visit root_path
+    first('article.product a').click
+    sleep 2
+
+    # DEBUG
+    save_screenshot
+
+    # VERIFY
+    expect(page).to have_css '.products-show'
+  end
+
 end
